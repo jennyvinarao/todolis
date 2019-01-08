@@ -52,7 +52,7 @@
 
 		while($row = mysqli_fetch_assoc($result)){?>
 		
-			<li class="list-group-item">data-id="<?php echo $row['id']; ?>">
+			<li class="list-group-item" data-id="<?php echo $row['id']; ?>">
 				<?php echo $row['name'] . " is task number " . $row['id'];?>
 				<div class="btn-group" role="group">
 				<button class="deleteBtn btn">Delete</button>				
@@ -76,11 +76,7 @@
 				method: 'GET',
 				url:'../controllers/remove_task.php',
 				data: {id: task_id},
-				// alert("Delete this task?"),
-				// success: function(result){
-    //     				alert(result.d);
-				// }
-			}) .done(data => {
+			}).done(data => {
 				$(this).parent().fadeOut();
 			});
 		});
