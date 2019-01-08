@@ -54,10 +54,8 @@
 		
 			<li class="list-group-item" data-id="<?php echo $row['id']; ?>">
 				<?php echo $row['name'] . " is task number " . $row['id'];?>
-				<div class="btn-group" role="group">
 				<button class="deleteBtn btn">Delete</button>				
-				<button class="doneBtn btn">Done</button>
-				</div>		
+				<button class="doneBtn btn">Done</button>	
 			</li>
 		
 
